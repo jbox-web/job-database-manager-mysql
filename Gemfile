@@ -11,5 +11,5 @@ group :development do
   ## Uncomment this line if you want to develop with the last version of Jenkins.
   ## This line **MUST** stay commented when doing "jpi build"
   ## otherwhise jpi bundle the war file into the .hpi file (about 65mo)
-  gem 'jenkins-war', git: 'https://github.com/jbox-web/jenkins-war.git', branch: 'v1.628'
+  #gem 'jenkins-war', git: 'https://github.com/jbox-web/jenkins-war.git', branch: 'v1.628'
 end
