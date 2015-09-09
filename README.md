@@ -39,7 +39,7 @@ These environment variables will be injected in the build :
 
 ## See also
 
-There is also a PostgreSQL variant of this plugin : https://github.com/jbox-web/job-database-manager-postgresql
+There is also a PostgreSQL variant of this plugin : [jbox-web/job-database-manager-postgresql](https://github.com/jbox-web/job-database-manager-postgresql)
 
 ## Contribute
 
