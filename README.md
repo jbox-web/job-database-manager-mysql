@@ -2,6 +2,7 @@
 
 [![GitHub license](https://img.shields.io/github/license/jbox-web/job-database-manager-mysql.svg)](https://github.com/jbox-web/job-database-manager-mysql/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release/jbox-web/job-database-manager-mysql.svg)](https://github.com/jbox-web/job-database-manager-mysql/releases/latest)
+[![Build Status](https://travis-ci.org/jbox-web/job-database-manager-mysql.svg?branch=master)](https://travis-ci.org/jbox-web/job-database-manager-mysql)
 [![Code Climate](https://codeclimate.com/github/jbox-web/job-database-manager-mysql/badges/gpa.svg)](https://codeclimate.com/github/jbox-web/job-database-manager-mysql)
 [![Download](https://img.shields.io/github/downloads/jbox-web/job-database-manager-mysql/latest/job-database-manager-mysql.hpi.svg)](https://github.com/jbox-web/job-database-manager-mysql/releases/download/1.0.0/job-database-manager-mysql.hpi)
 

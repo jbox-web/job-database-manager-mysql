@@ -1,0 +1,5 @@
+language: ruby
+sudo: false
+rvm:
+  - jruby-1.7.19
+  - jruby-1.7.20
