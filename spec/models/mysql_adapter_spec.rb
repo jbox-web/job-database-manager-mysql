@@ -20,6 +20,13 @@ describe JobDatabaseManagerMysql::MysqlAdapter do
   end
 
 
+  describe '#create_privileges_query' do
+    it 'should return a SQL statement to create user' do
+      expect(klass.create_privileges_query('database', 'user', 'password')).to be nil
+    end
+  end
+
+
   describe '#drop_database_query' do
     it 'should return a SQL statement to drop database' do
       expect(klass.drop_database_query('database')).to eq 'DROP DATABASE IF EXISTS database;'
@@ -27,9 +34,9 @@ describe JobDatabaseManagerMysql::MysqlAdapter do
   end
 
 
-  describe '#drop_privilege_query' do
+  describe '#drop_privileges_query' do
     it 'should return a SQL statement to drop privileges' do
-      expect(klass.drop_privilege_query('user')).to eq "REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'%';"
+      expect(klass.drop_privileges_query('user')).to eq "REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'%';"
     end
   end
 

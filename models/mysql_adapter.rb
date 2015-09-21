@@ -15,12 +15,17 @@ class JobDatabaseManagerMysql < Jenkins::Model::RootAction
     end
 
 
+    def create_privileges_query(database, user, password)
+      nil
+    end
+
+
     def drop_database_query(database)
       "DROP DATABASE IF EXISTS #{database};"
     end
 
 
-    def drop_privilege_query(user)
+    def drop_privileges_query(user)
       "REVOKE ALL PRIVILEGES, GRANT OPTION FROM '#{user}'@'%';"
     end
 
