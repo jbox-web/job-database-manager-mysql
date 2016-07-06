@@ -10,7 +10,7 @@
 
 ## Installation
 
-Download the [hpi file](https://github.com/jbox-web/job-database-manager-mysql/releases/download/1.0.0/job-database-manager-mysql.hpi) and install it within Jenkins interface.
+Install the ```ruby-runtime``` plugin in Jenkins then download the [hpi file](https://github.com/jbox-web/job-database-manager-mysql/releases/download/1.0.0/job-database-manager-mysql.hpi) and install it within Jenkins interface.
 
 ## Configuration
 
