@@ -3,3 +3,4 @@
 /.idea
 /*.lock
 /coverage
+/.ruby-version
