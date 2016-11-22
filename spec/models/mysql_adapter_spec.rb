@@ -15,14 +15,14 @@ describe JobDatabaseManagerMysql::MysqlAdapter do
 
   describe '#create_user_query' do
     it 'should return a SQL statement to create user' do
-      expect(klass.create_user_query('database', 'user', 'password')).to eq "GRANT ALL ON database.* TO 'user'@'%' IDENTIFIED BY 'password';"
+      expect(klass.create_user_query('database', 'user', 'password')).to eq "CREATE USER 'user'@'%' IDENTIFIED BY 'password';"
     end
   end
 
 
   describe '#create_privileges_query' do
     it 'should return a SQL statement to create user' do
-      expect(klass.create_privileges_query('database', 'user', 'password')).to be nil
+      expect(klass.create_privileges_query('database', 'user', 'password')).to eq "GRANT ALL PRIVILEGES ON database.* TO 'user'@'%';GRANT ALL PRIVILEGES ON database.* TO 'user'@'localhost';"
     end
   end
 
@@ -36,7 +36,7 @@ describe JobDatabaseManagerMysql::MysqlAdapter do
 
   describe '#drop_privileges_query' do
     it 'should return a SQL statement to drop privileges' do
-      expect(klass.drop_privileges_query('user')).to eq "REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'%';"
+      expect(klass.drop_privileges_query('user')).to eq "REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'%';REVOKE ALL PRIVILEGES, GRANT OPTION FROM 'user'@'localhost';"
     end
   end
 
