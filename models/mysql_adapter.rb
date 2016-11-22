@@ -9,14 +9,13 @@ class JobDatabaseManagerMysql < Jenkins::Model::RootAction
 
 
     def create_user_query(database, user, password)
-      "GRANT ALL ON #{database}.*" +
-      " TO '#{user}'@'%'" +
-      " IDENTIFIED BY '#{password}';"
+      "CREATE USER '#{user}'@'%' IDENTIFIED BY '#{password}';"
     end
 
 
     def create_privileges_query(database, user, password)
-      nil
+      "GRANT ALL PRIVILEGES ON #{database}.* TO '#{user}'@'%';" +
+        "GRANT ALL PRIVILEGES ON #{database}.* TO '#{user}'@'localhost';"
     end
 
 
@@ -26,7 +25,8 @@ class JobDatabaseManagerMysql < Jenkins::Model::RootAction
 
 
     def drop_privileges_query(user)
-      "REVOKE ALL PRIVILEGES, GRANT OPTION FROM '#{user}'@'%';"
+      "REVOKE ALL PRIVILEGES, GRANT OPTION FROM '#{user}'@'%';" +
+        "REVOKE ALL PRIVILEGES, GRANT OPTION FROM '#{user}'@'localhost';"
     end
 
 
