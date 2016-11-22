@@ -5,9 +5,9 @@ gem 'jenkins-plugin-base',    '~> 1.0.0', git: 'https://github.com/jbox-web/jenk
 gem 'job-database-manager',   '~> 1.0.0', git: 'https://github.com/jbox-web/job-database-manager.git'
 
 group :development do
-  gem 'rake',      '~> 10.4.1'
-  gem 'rspec',     '~> 3.3.0'
-  gem 'simplecov', '~> 0.10.0'
+  gem 'rake'
+  gem 'rspec'
+  gem 'simplecov'
 
   gem 'jpi',           '~> 0.4.0'
   gem 'jenkins-peace', '~> 1.0.0', git: 'https://github.com/jbox-web/jenkins-peace.git'
