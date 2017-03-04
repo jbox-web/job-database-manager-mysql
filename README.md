@@ -38,6 +38,10 @@ These environment variables will be injected in the build :
 * `$MYSQL_HOST`
 * `$MYSQL_PORT`
 
+## Important Note
+
+This plugin does not integrate with the new Declarative Pipeline functionality in Jenkins. You will need to use a Freestyle or Multi-configuration job type to make use of it.
+
 ## See also
 
 There is also a PostgreSQL variant of this plugin : [jbox-web/job-database-manager-postgresql](https://github.com/jbox-web/job-database-manager-postgresql)
