@@ -1,7 +1,5 @@
-dist: trusty
 language: ruby
-sudo: false
 cache: bundler
+sudo: false
 rvm:
-  - jruby-1.7.26
-  - jruby-9.2.4.0
+  - jruby-9.2.5.0
