@@ -2,4 +2,4 @@ language: ruby
 cache: bundler
 sudo: false
 rvm:
-  - jruby-9.2.5.0
+  - jruby-9.2.9.0
