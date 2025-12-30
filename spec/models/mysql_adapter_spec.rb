@@ -15,7 +15,7 @@ describe JobDatabaseManagerMysql::MysqlAdapter do
 
   describe '#create_user_query' do
     it 'should return a SQL statement to create user' do
-      expect(klass.create_user_query('database', 'user', 'password')).to eq "CREATE USER 'user'@'%' IDENTIFIED BY 'password';"
+      expect(klass.create_user_query('database', 'user', 'password')).to eq "CREATE USER IF NOT EXISTS 'user'@'%' IDENTIFIED BY 'password';"
     end
   end
 

@@ -9,7 +9,7 @@ class JobDatabaseManagerMysql < Jenkins::Model::RootAction
 
 
     def create_user_query(database, user, password)
-      "CREATE USER '#{user}'@'%' IDENTIFIED BY '#{password}';"
+      "CREATE USER IF NOT EXISTS '#{user}'@'%' IDENTIFIED BY '#{password}';"
     end
 
 
